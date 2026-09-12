@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	body {
+	  background-image:url("bg.jpg");
+	  }
+
+	h1 {
+	  color: white;
+	  text-align: center;
+	  font-family: helvetica;
+	  font-size: 8vw;
+	  line-height:10px;
+	  }
+
+	p {
+	  font-family: helvetica;
+	  font-size:calc(12px + 1.5vw);
+	  }
+
+	jezza {
+		max-width:50%;
+		height:auto;
+		content:url("hello.png")
+		}
+		
+	@keyframes mooving {
+		0% {left:0px;}
+		50% {left:80vw;}
+		100% {left:0px;}
+		}
+		
+	@keyframes spinnin {
+		0% {transform: rotate(0deg);}
+		50% {transform:rotate(180deg);}
+		100% {transform:rotate(360deg);}
+		}
+	
+	div {
+		max-width:30%;
+		height: auto;
+		content:url("hello.png");
+		position: relative;
+		animation: mooving 10s infinite;
+		}
+		
+	div:hover {
+		animation: mooving 10s infinite, spinnin 0.5s 1;
+		}
+		
+	.door1 {
+		height: 300px;
+		width: 150px;
+		position: relative;
+		cursor: pointer;
+		background:url("songs.png");
+		background-size:cover;
+		}
+		
+	.door1:hover {
+		height: 300px;
+		width: 150px;
+		position: relative;
+		cursor: pointer;
+		background:url("songsopen.png");
+		background-size:cover;
+		}
+		
+	.door2 {
+		height: 300px;
+		width: 150px;
+		position: relative;
+		cursor: pointer;
+		background:url("studio.png");
+		background-size:cover;
+		}
+		
+	.door2:hover {
+		height: 300px;
+		width: 150px;
+		position: relative;
+		cursor: pointer;
+		background:url("studioopen.png");
+		background-size:cover;
+		}
+	
+</style>
+<h1>JEZZA</h1>
+</head>
+<body>
+<p>hi, i'm JEZZA! i make atmospheric electronic music u can dance to :)<br>take a look around!</p>
+<br>
+
+<button class="door1"></button>
+<button class="door2"></button>
+
+
+<div></div>
+
+</body>
