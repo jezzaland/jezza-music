@@ -17,7 +17,7 @@
 	p {
 	  color: white;
 	  font-family: helvetica;
-	  font-size:calc(12px + 2vw);
+	  font-size:calc(12px + 4vw);
 	  }
 
 	jezza {
@@ -51,13 +51,29 @@
 		}
 	
 </style>
+
 <h1>JEZZA</h1>
 </head>
 <body>
-<p>solve the puzzle...</p>
+<p>solve the puzzle for a little surprise...</p>
 <img src="puzzle.png" style="width:500px;height:150px"></img>
 <br>
+<input type="text" oninput="func1()" id="puzzans" style="width:300px;height:50px;font-size:25px"></input>
+<p id="op"></p>
 
+<script>
+	function func1() {
+	  let x = document.getElementById("puzzans").value;
+	  if (x=="131126") {
+	  document.getElementById("op").innerHTML = x + " is correct!";}
+	  else if (x=="13/11/26") {
+	  document.getElementById("op").innerHTML = x + " is correct!";}
+	  else if (x=="13 11 26") {
+	  document.getElementById("op").innerHTML = x + " is correct!";}
+	  else {
+	  document.getElementById("op").innerHTML = "not quite!";}
+	}
+</script>
 <div></div>
 
 </body>
