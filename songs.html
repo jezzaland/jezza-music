@@ -62,14 +62,22 @@
 	  background-color:black;
 	  }
 	  
+	.main {
+	font-size:min(7.5vw,45px);
+	font-family: helvetica;
+	float: left;
+	  }
+	  
 	 audio {display:none;}
 	
 </style>
+<button class="main" id="main" onclick=playaudio() type="button">play audio</button>
 </head>
 <body>
-<audio id="bgm" controls autoplay>
+<audio id="bgm" controls loop>
   <source src="songspage.mp3" type="audio/mp3">
 </audio>
+<br>
 <p>solve the code for a little surprise...</p>
 <img src="puzzle.png" style="width:80vw;height:auto;max-width:1000px"></img>
 <br>
@@ -100,16 +108,21 @@
 		let y = document.getElementById("presave")
 	  let x = document.getElementById("puzzans").value;
 	  if (x=="131126" || x=="13/11/26" || x=="13 11 26") {
-	  document.getElementById("op").innerHTML = x + " is correct! now you can access a secret link... but feel free to share it ;) also, here's a little snippet:"
-	  y.style.display = "block"
-	  let m = document.getElementById("bgm")
-	  bgm.mute()
-	  let z = document.getElementById("snip")
-	  z.style.display = "block";}
+	  document.getElementById("op").innerHTML = x + " is correct! now you can access a secret link... but feel free to share it ;) also, here's a little snippet:";
+	  y.style.display = "block";
+	  let z = document.getElementById("snip");
+	  z.style.display = "block";
+	  let m = document.getElementById("bgm");
+	  m.pause();
+	  }
 	  else {
 	  document.getElementById("op").innerHTML = "not quite!";}
 	  }
-
+	
+		function playaudio()
+		{var main = document.getElementById("bgm");
+		main.load();
+		main.play();}
 </script>
 <br>
 <div></div>

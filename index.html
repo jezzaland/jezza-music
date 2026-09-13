@@ -106,17 +106,25 @@
 	  background-color:black;
 	  }
 	  
+	.main {
+	font-size:min(7.5vw,45px);
+	font-family: helvetica;
+	float: left;
+	  }
+	  
 	audio {display:none;}
 	  
 </style>
+<button class="main" id="main" onclick=playaudio() type="button">play audio</button>
 <h1>J  E  Z  Z  A</h1>
-<img href=
 </head>
 <body>
 <p>hi, i'm JEZZA! i make atmospheric electronic music u can dance to :)<br>take a look around!</p>
 <br>
 
-<audio id="bgm" controls autoplay>
+
+
+<audio id="bgm" controls loop>
   <source src="homepage.mp3" type="audio/mp3">
 </audio>
 
@@ -145,6 +153,11 @@ var nope = document.getElementById("noentry");
 nope.load();
 nope.play();
 }
+
+function playaudio()
+{var main = document.getElementById("bgm");
+main.load();
+main.play();}
 </script>
 
 <div></div>
