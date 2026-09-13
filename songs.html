@@ -68,7 +68,7 @@
 </head>
 <body>
 <audio id="bgm" controls autoplay>
-  <source src="songspage.wav" type="audio/wav">
+  <source src="songspage.mp3" type="audio/mp3">
 </audio>
 <p>solve the code for a little surprise...</p>
 <img src="puzzle.png" style="width:80vw;height:auto;max-width:1000px"></img>
@@ -103,7 +103,7 @@
 	  document.getElementById("op").innerHTML = x + " is correct! now you can access a secret link... but feel free to share it ;) also, here's a little snippet:"
 	  y.style.display = "block"
 	  let m = document.getElementById("bgm")
-	  bgm.pause()
+	  bgm.mute()
 	  let z = document.getElementById("snip")
 	  z.style.display = "block";}
 	  else {
