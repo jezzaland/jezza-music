@@ -17,7 +17,8 @@
 	p {
 	  color: white;
 	  font-family: helvetica;
-	  font-size:min(calc(12px + 4vw),80px);
+	  font-size:min(calc(5vw),50px);
+	  line-height:50px;
 	  }
 
 	jezza {
@@ -51,25 +52,22 @@
 		}
 	
 </style>
-
-<h1>JEZZA</h1>
 </head>
 <body>
 <p>solve the puzzle for a little surprise...</p>
-<img src="puzzle.png" style="width:50vw;height:auto,max-width:300px"></img>
+<img src="puzzle.png" style="width:80vw;height:auto;max-width:1000px"></img>
 <br>
 <input type="text" oninput="func1()" id="puzzans" style="width:300px;height:50px;font-size:25px"></input>
 <p id="op"></p>
+<a id="presave" style="display:none;font-size:min(calc(5vw),50px);font-family: helvetica;;" href="https://distrokid.com/hyperfollow/jezza9/nordnesparken-2">Presave my first single here!!!</a>
 
 <script>
 	function func1() {
+		let y = document.getElementById("presave")
 	  let x = document.getElementById("puzzans").value;
-	  if (x=="131126") {
-	  document.getElementById("op").innerHTML = x + " is correct!";}
-	  else if (x=="13/11/26") {
-	  document.getElementById("op").innerHTML = x + " is correct!";}
-	  else if (x=="13 11 26") {
-	  document.getElementById("op").innerHTML = x + " is correct!";}
+	  if (x=="131126" || x=="13/11/26" || x=="13 11 26") {
+	  document.getElementById("op").innerHTML = x + " is correct! now you can access a secret link... but feel free to share it ;)"
+	  y.style.display = "block"}
 	  else {
 	  document.getElementById("op").innerHTML = "not quite!";}
 	}
