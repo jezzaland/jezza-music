@@ -92,23 +92,64 @@
 		background-size:cover;
 		}
 		
+	.fox {
+		height: 150px;
+		width: 250px;
+		position: relative;
+		cursor: pointer;
+		float: right;
+		top: 200px;
+		background:url("sleepybaby.png");
+		background-size:contain;}
+		
 	footer {
 	  background-color:black;
 	  }
 	  
+	audio {display:none;}
+	  
 </style>
 <h1>J  E  Z  Z  A</h1>
+<img href=
 </head>
 <body>
 <p>hi, i'm JEZZA! i make atmospheric electronic music u can dance to :)<br>take a look around!</p>
 <br>
 
-<button class="door1" onclick="document.location='songs.html';" type="button"></button>
-<button class="door2"></button>
+<audio id="bgm" controls autoplay>
+  <source src="homepage.wav" type="audio/wav">
+</audio>
 
+<button class="door1" onclick="document.location='songs.html';" type="button"></button>
+<button class="door2" id="door2" onclick=notonthelist() type="button"></button>
+<audio id="noentry" controls>
+	<source src="notonthelist.wav" type="audio/wav">
+</audio>
+<img id="fox" class="fox" onclick=changeImage() onclick=playaudio()>
+<audio id="snore" controls>
+	<source src="honkshoo.wav" type="audio/wav">
+</audio>
+<script>
+function changeImage()
+{
+var img = document.getElementById("fox");
+var snore = document.getElementById("snore");
+img.src="snoring.png";
+snore.load();
+snore.play();
+return false;}
+
+function notonthelist()
+{var list = document.getElementById("door2");
+var nope = document.getElementById("noentry");
+nope.load();
+nope.play();
+}
+</script>
 
 <div></div>
 
+</body>
 <footer>
 <p> links:</p>
 <a href="https://www.instagram.com/jezza_m21/"><img src="insta.png" style="height:100px;width:100px" /></a>
@@ -119,4 +160,3 @@
 <p class="small">PS: i fully coded this website myself in HTML, no AI was used :)</p>
 </footer>
 
-</body>
