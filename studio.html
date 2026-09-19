@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	body {
+	  background-image:url("bg.png");
+	  }
+
+	h1 {
+	  color: white;
+	  text-align: center;
+	  font-family: helvetica;
+	  font-size: 8vw;
+	  line-height:10px;
+	  }
+
+	p {
+	  color: white;
+	  font-family: helvetica;
+	  font-size:min(calc(5vw),40px);}
+	  
+	.title {
+	  color: white;
+	  font-family: helvetica;
+	  font-size:min(8vw,50px);
+	  line-height:0px}
+
+	jezza {
+		max-width:50%;
+		height:auto;
+		content:url("hello.png")
+		}
+		
+	@keyframes mooving {
+		0% {left:0px;}
+		50% {left:80vw;}
+		100% {left:0px;}
+		}
+		
+	@keyframes spinnin {
+		0% {transform: rotate(0deg);}
+		50% {transform:rotate(180deg);}
+		100% {transform:rotate(360deg);}
+		}
+	
+	.beepboop {
+		max-width:30%;
+		height: auto;
+		content:url("hello.png");
+		position: relative;
+		animation: mooving 10s infinite;
+		}
+		
+	.beepboop:hover {
+		animation: mooving 10s infinite, spinnin 0.5s 1;
+		}
+		
+	.door1 {
+		height: 400px;
+		width: 200px;
+		position: relative;
+		cursor: pointer;
+		background:url("songs.png");
+		background-size:cover;
+		}
+		
+	.door1:hover {
+		height: 400px;
+		width: 200px;
+		position: relative;
+		cursor: pointer;
+		background:url("songsopen.png");
+		background-size:cover;
+		}
+		
+	.door2 {
+		height: 400px;
+		width: 200px;
+		position: relative;
+		cursor: pointer;
+		background:url("studionoentry.png");
+		background-size:cover;
+		}
+		
+	.door2:hover {
+		height: 400px;
+		width: 200px;
+		position: relative;
+		cursor: pointer;
+		background:url("studioopennoentry.png");
+		background-size:cover;
+		}
+		
+	.fox {
+		height: 150px;
+		width: 250px;
+		position: relative;
+		cursor: pointer;
+		float: right;
+		top: 200px;
+		background:url("sleepybaby.png");
+		background-size:contain;}
+
+	.small {
+	  color: white;
+	  font-family: helvetica;
+	  font-size:min(8vw,30px);}
+		
+	.teeny {
+	  color: white;
+	  font-family: helvetica;
+	  font-size:min(4vw,20px);}
+	  
+	footer {
+	  background-color:black;
+	  }
+	  
+	.main {
+	font-size:min(7.5vw,45px);
+	font-family: helvetica;
+	float: left;
+	  }
+	  
+	img {
+	float:left;}
+	
+	div {
+	display: inline-block;}
+	
+	.titles{
+	background-color:black;
+	width:100%;}
+	  
+	audio {display:none;}
+	
+	.click{
+	color:black;
+	font-family:helvetica;
+	font-size:16px;
+	margin: 5px 5px 5px 5px;
+	background-color:white;
+	line-height:0px;}
+	  
+</style>
+</head>
+<body>
+<p>welcome to my studio! here's an (incomplete) list of my gear :)<br>click on the photos to hear what they sound like!</p>
+<br>
+
+<article id="poly">
+<div class="titles">
+<p class="title">POLYSYNTHS</p>
+<a href="#drums" class="click">drum machines</a>
+<a href="#mono" class="click">monosynths</a>
+</div>
+
+<div>
+<p class="small">udo super 6 (st49)</p>
+<img style="width:400px;height:150px" src="s6.png" onclick=s6play()>
+<p class="teeny">my favourite synth!! a really unique take on a classic polysynth, sample-based oscillators through an analogue filter etc, with binaural mode (super cool stereo imaging) and built-in roland-style choruses. this synth is 100% sweet spots, i use it on everything!<br>used on: nordnesparken</p>
+</div>
+
+<div>
+<p class="small">sequential prophet rev2</p>
+<img style="width:400px;height:150px" src="rev2.png" onclick=rev2play()>
+<p class="teeny">my first polysynth back in march 2024! a workhorse, great for the traditional prophet sounds and can go so deep with modulation options<br>used on: nothing yet released!</p>
+</div>
+</article>
+
+<br>
+
+<article id="mono">
+<div class="titles">
+<p class="title">MONOSYNTHS</p>
+<a href="#drums" class="click">drum machines</a>
+<a href="#poly" class="click">polysynths</a>
+</div>
+
+<div>
+<p class="small">moog subsequent 37</p>
+<img style="width:400px;height:200px" src="s37.png" onclick=s37play()>
+<p class="teeny">my first ever synth, so holds a special place in my heart! an absolute beast and wonderful for the classic moog sound, especially for plucky arps and ground-shaking basses<br>used on: nothing yet released!</p>
+</div>
+
+<div>
+<p class="small">korg ms-20 mini</p>
+<img style="width:400px;height:250px" src="ms20.png" onclick=ms20play()>
+<p class="teeny">my first semi-modular, which took me down the rabbit hole of patching and eventually into modular! my fav for weird leads, and i love cranking the resonances of the dual filters to get nasty, growling basses<br>used on: nordnesparken</p>
+</div>
+
+<br>
+</article>
+
+<br>
+
+<article id="drums">
+<div class="titles">
+<p class="title">DRUM MACHINES</p>
+<a href="#poly" class="click">polysynths</a>
+<a href="#mono" class="click">monosynths</a>
+</div>
+<div>
+<p class="small">elektron syntakt</p>
+<img style="width:400px;height:400px" src="syntakt.png" onclick=syntaktplay()>
+<p class="teeny">my go-to drum machine recently! 8 digital and 4 analogue machines and the famously powerful elektron sequencer, it makes awesome drums and you can also use it as a groovebox with lots of cool synth sounds<br>used on: nordnesparken</p>
+</div>
+<br>
+</article>
+
+<script>
+var playing = true
+
+function syntaktplay()
+{var a = document.getElementById("syntakt");
+    if (!playing){
+        playing = true;
+		a.load()
+        a.play();
+        } 
+    else{
+        playing = false;
+        a.pause();
+        }
+}
+
+function s6play()
+{var a = document.getElementById("s6");
+    if (!playing){
+        playing = true;
+		a.load()
+        a.play();
+        } 
+    else{
+        playing = false;
+        a.pause();
+        }
+}
+
+function rev2play()
+{var a = document.getElementById("rev2");
+    if (!playing){
+        playing = true;
+		a.load()
+        a.play();
+        } 
+    else{
+        playing = false;
+        a.pause();
+        }
+}
+
+function s37play()
+{var a = document.getElementById("s37");
+    if (!playing){
+        playing = true;
+		a.load()
+        a.play();
+        } 
+    else{
+        playing = false;
+        a.pause();
+        }
+}
+
+function ms20play()
+{var a = document.getElementById("ms20");
+    if (!playing){
+        playing = true;
+		a.load()
+        a.play();
+        } 
+		
+    else{
+        playing = false;
+        a.pause();
+        }
+}
+
+
+</script>
+
+<audio id="syntakt" controls>
+  <source src="syntakt.wav" type="audio/wav">
+</audio>
+
+<audio id="s6" controls>
+  <source src="sup6.wav" type="audio/wav">
+</audio>
+
+<audio id="rev2" controls>
+  <source src="rev2.wav" type="audio/wav">
+</audio>
+
+<audio id="s37" controls>
+  <source src="s37.wav" type="audio/wav">
+</audio>
+
+<audio id="ms20" controls>
+  <source src="ms20.wav" type="audio/wav">
+</audio>
+
+<div class="beepboop"></div>
+
+</body>
+<footer>
+<p> links:</p>
+<a href="https://www.instagram.com/jezza_m21/"><img src="insta.png" style="height:100px;width:100px" /></a>
+<a href="https://www.tiktok.com/@jezza.m"><img src="tt.png" style="height:100px;width:100px" /></a>
+<a href="https://www.youtube.com/@JezzaMakesMusic"><img src="yt.png" style="height:100px;width:100px" /></a>
+<a href="https://jezzam.bandcamp.com"><img src="bc.png" style="height:100px;width:100px" /></a>
+<a href="https://soundcloud.com/jezza-m-42409955"><img src="sc.png" style="height:100px;width:100px" /></a>
+<p class="small">PS: i fully coded this website myself in HTML, no AI was used :)</p>
+</footer>
+
