@@ -228,7 +228,11 @@
 	<img style="width:400px;height:auto" src="sys1m.png" onclick=sys1mplay()>
 	<p class="teeny">a lovely roland mono with modular capabilities, can also be used as a 'plug-out' synth (basically loading a VST plugin onto the synth itself! i normally use the sh-101). can do 4 voice polyphony if needed too!</p>
 </div>
-
+<div>
+	<p class="small">moog mother-32</p>
+	<img style="width:400px;height:auto" src="m32.png" onclick=m32play()>
+	<p class="teeny">i wanted a modular moog, and this thing sounds great! really snappy envelopes so i especially love it for arps. also really useful utilities for a modular setup, as you can patch everything in/out seperately - so can add an extra oscillator, filter, vca, envelope, lfo and 32 step sequencer to a system!</p>
+</div>
 <br>
 </article>
 
@@ -260,7 +264,7 @@
 <div>
 	<p class="small">moog dfam</p>
 	<img style="width:400px;height:auto" src="dfam.png" onclick=dfamplay()>
-	<p class="teeny">an analogue percussion synth, something of a surprise for me as i wasn't fully convinced when i bought it but it finds its way into most things i make!</p>
+	<p class="teeny">an analogue percussion synth, something of a surprise for me as most demos are hard hitting/techno but it finds its way into most things i make! my favourite for percussive textures, but can get nasty if you want. the patch bay really adds an extra dimension</p>
 </div>
 <br>
 </article>
@@ -276,10 +280,8 @@
 <div>
 	<p class="small">moog spectravox</p>
 	<img style="width:400px;height:auto" src="sv.png" onclick=svplay()>
-	<p class="teeny">an analogue spectral processor, whatever that means! functions brilliantly as a fixed filter bank to process other signals, can do some physical modelling with resonance cranked up, and also can be used as a vocoder. i think it shines best with percussion running through it, just adding a little extra spice!</p>
+	<p class="teeny">an analogue spectral processor, whatever that means! functions brilliantly as a fixed filter bank to process other signals, can do some physical modelling with resonance cranked up, and also can be used as a vocoder. i think it shines best with percussion running through it, just adding a little extra spice! semi-modular, so integrates nicely with eurorack stuff too</p>
 </div>
-<div>
-	<p class="small">coming soon...</p>
 <script>
 var playing = true
 
@@ -465,6 +467,18 @@ function dfamplay()
         }
 }
 
+function m32play()
+{var a = document.getElementById("m32");
+    if (!playing){
+        playing = true;
+		a.load()
+        a.play();
+        } 
+    else{
+        playing = false;
+        a.pause();
+        }
+}
 </script>
 
 <audio id="syntakt" controls>
