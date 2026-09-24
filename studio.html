@@ -33,7 +33,7 @@
 		
 	@keyframes mooving {
 		0% {left:0px;}
-		50% {left:70vw;}
+		50% {left:65vw;}
 		100% {left:0px;}
 		}
 		
@@ -299,18 +299,18 @@
 </div>
 <div>
 	<p class="small">hologram chroma console</p>
-	<img style="width:400px;height:auto" src="sv.png" onclick=svplay()>
-	<p class="teeny">description here</p>
+	<img style="width:400px;height:auto" src="cc.png" onclick=ccplay()>
+	<p class="teeny">my favourite pedal! 4 'modules' of effects that can be routed differently to add a ridiculous amount of character to anything. distortion, tape simulation, delays, pitch effects, doublers, tremolos, and all sorts!<br>(audio is a rev2 running through chroma console, then valhalla ubermod chorus and vintageverb)</p>
 </div>
 <div>
 	<p class="small">t-rex replicator d'luxe</p>
 	<img style="width:400px;height:auto" src="sv.png" onclick=svplay()>
-	<p class="teeny">description here</p>
+	<p class="teeny">an analogue spectral processor, whatever that means! functions brilliantly as a fixed filter bank to process other signals, can do some physical modelling with resonance cranked up, and also can be used as a vocoder. i think it shines best with percussion running through it, just adding a little extra spice! semi-modular, so integrates nicely with eurorack stuff too</p>
 </div>
 <div>
 	<p class="small">asheville music tools adg-1</p>
 	<img style="width:400px;height:auto" src="sv.png" onclick=svplay()>
-	<p class="teeny">description here</p>
+	<p class="teeny">an analogue spectral processor, whatever that means! functions brilliantly as a fixed filter bank to process other signals, can do some physical modelling with resonance cranked up, and also can be used as a vocoder. i think it shines best with percussion running through it, just adding a little extra spice! semi-modular, so integrates nicely with eurorack stuff too</p>
 </div>
 <script>
 var playing = true
@@ -509,6 +509,19 @@ function m32play()
         a.pause();
         }
 }
+
+function ccplay()
+{var a = document.getElementById("cc");
+    if (!playing){
+        playing = true;
+		a.load()
+        a.play();
+        } 
+    else{
+        playing = false;
+        a.pause();
+        }
+}
 </script>
 
 <audio id="syntakt" controls>
@@ -569,6 +582,10 @@ function m32play()
 
 <audio id="m32" controls>
   <source src="m32.wav" type="audio/wav">
+</audio>
+
+<audio id="cc" controls>
+  <source src="cc.wav" type="audio/wav">
 </audio>
 
 <div class="beepboop"></div>
